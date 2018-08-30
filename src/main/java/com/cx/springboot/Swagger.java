@@ -1,5 +1,7 @@
-package com.cx.config.swagger;
+package com.cx.springboot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -14,11 +16,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class Swagger {
 
+    /**
+     * 日志管理
+     */
+    private Logger log = LoggerFactory.getLogger(Swagger.class);
+
     @Bean
-    public Docket createRestApi(){
+    public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2).
                 apiInfo(apiInfo()).
-//                pathMapping("/api/v1").
                 select().
                 apis(RequestHandlerSelectors.basePackage("com.cx.modules.admin.*.controller")).
                 paths(PathSelectors.any()).
@@ -26,14 +32,14 @@ public class Swagger {
     }
 
 
-    private ApiInfo apiInfo(){
-        return new  ApiInfoBuilder().title("Spring Boot中使用Swagger2构建RESTful APIs").
-                                description("更多Spring Boot相关文章请关注：http://blog.didispace.com/").
-                                termsOfServiceUrl("http://blog.didispace.com/").
-                                contact ( "蔡鑫").
-                                version("1.0").
-                                build();
-                }
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder().title("Spring Boot中使用Swagger2构建RESTful APIs").
+                description("更多Spring Boot相关文章请关注：http://blog.didispace.com/").
+                termsOfServiceUrl("http://blog.didispace.com/").
+                contact("蔡鑫").
+                version("1.0").
+                build();
+    }
 
 
 }
