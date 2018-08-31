@@ -1,4 +1,4 @@
-package com.cx.modules.admin.student.entity;
+package com.cx.springboot.entity;
 
 
 public class Student {

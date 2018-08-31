@@ -1,4 +1,4 @@
-package com.cx.config.druid;
+package com.cx.springboot.config.druid;
 
 import com.alibaba.druid.support.http.WebStatFilter;
 

@@ -1,4 +1,4 @@
-package com.cx.springboot;
+package com.cx.springboot.config.swagger2;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ public class Swagger {
         return new Docket(DocumentationType.SWAGGER_2).
                 apiInfo(apiInfo()).
                 select().
-                apis(RequestHandlerSelectors.basePackage("com.cx.modules.admin.*.controller")).
+                apis(RequestHandlerSelectors.basePackage("com.cx.springboot.controller")).
                 paths(PathSelectors.any()).
                 build();
     }

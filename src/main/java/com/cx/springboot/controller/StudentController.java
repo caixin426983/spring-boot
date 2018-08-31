@@ -1,4 +1,4 @@
-package com.cx.modules.admin.student.controller;
+package com.cx.springboot.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

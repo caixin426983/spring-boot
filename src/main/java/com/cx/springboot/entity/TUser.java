@@ -1,6 +1,7 @@
-package com.cx.modules.admin.user.entity;
+package com.cx.springboot.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
 
 import java.io.Serializable;
@@ -18,6 +19,8 @@ public class TUser extends Model<TUser> implements Serializable {
     private Integer sex;
 
     private Integer age;
+
+    private Integer roleId;
 
     public Long getId() {
         return id;
@@ -51,8 +54,18 @@ public class TUser extends Model<TUser> implements Serializable {
         this.age = age;
     }
 
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
+
+
 }
