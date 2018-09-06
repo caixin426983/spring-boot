@@ -74,6 +74,14 @@
 			<version>2.1.8</version>
 		</dependency>
 
+		<!-- springboot分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<!-- 特别注意版本问题, 看到评论以后得以纠正 -->
+			<version>1.2.3</version>
+		</dependency>
+
 		<!-- 模板引擎 -->
 		<dependency>
 			<groupId>org.apache.velocity</groupId>

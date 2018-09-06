@@ -11,4 +11,6 @@ public interface IUserService extends IService<TUser> {
     List<TUser> getAllUser();
 
     TUser getUserById(Long id);
+
+    List<TUser> page(Integer pageNum,Integer pageSize);
 }
