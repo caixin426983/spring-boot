@@ -1,6 +1,6 @@
 #端口
 server:
-  port: 8088
+  port: 8087
 
 
 spring:
@@ -8,7 +8,7 @@ spring:
 #    url: jdbc:mysql://192.168.1.24:3306/test?useUnicode=true&characterEncoding=utf8
     url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8
     username: root
-    password: 123456
+    password: root
     driverClassName: com.mysql.jdbc.Driver
 
 #连接池的配置信息
