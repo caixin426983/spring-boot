@@ -21,7 +21,7 @@ public class UserController {
     private IUserService userService;
 
     @ApiOperation(value = "查询所有用户", notes = "查询所有用户")
-    @RequestMapping("getAllUser")
+    @RequestMapping(value = "getAllUser",method = RequestMethod.GET)
     public Object getAllUser() {
         return userService.getAllUser();
     }

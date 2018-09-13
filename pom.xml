@@ -116,7 +116,15 @@
 			<version>2.8.0</version>
 		</dependency>
 
-
+		<!-- caching -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
 
 	</dependencies>
 
