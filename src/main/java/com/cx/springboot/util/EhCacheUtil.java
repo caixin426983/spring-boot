@@ -4,18 +4,21 @@ import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 
+import java.text.ParseException;
+import java.util.Date;
+
 
 public class EhCacheUtil {
 
     /**
      * 设置缓存对象
      *
-     * @param cacheManager
      * @param key
      * @param value
      */
-    public static void setCache(CacheManager cacheManager, String key, Object value) {
-        Cache cache = cacheManager.getCache("objectCache");
+    public static void setCache(String key, Object value) {
+        CacheManager cacheManager = new CacheManager();
+        Cache cache = cacheManager.getCache("demo");
         Element element = new Element(key, value);
         cache.put(element);
     }
@@ -23,18 +26,20 @@ public class EhCacheUtil {
     /**
      * 从缓存中取出对象
      *
-     * @param cacheManager
      * @param key
      * @return
      */
-    public static Object getCache(CacheManager cacheManager, String key) {
+    public static Object getCache(String key) {
         Object object = null;
-        Cache cache = cacheManager.getCache("objectCache");
+        CacheManager cacheManager = new CacheManager();
+        Cache cache = cacheManager.getCache("demo");
         if (cache.get(key) != null && !cache.get(key).equals("")) {
             object = cache.get(key).getObjectValue();
         }
         return object;
     }
+
+
 
 
 }

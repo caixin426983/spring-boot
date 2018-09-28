@@ -3,7 +3,8 @@
          xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
          updateCheck="false">
 
-    <diskStore path="java.io.tmpdir/Tmp_EhCache" />
+    <!-- 磁盘缓存位置 -->
+    <diskStore path="java.io.tmpdir/ehcache"/>
 
     <!--diskStore： 为缓存路径，ehcache分为内存和磁盘两级，此属性定义磁盘的缓存位置。参数解释如下：　　　　-->
 
@@ -12,10 +13,15 @@
     <!--java.io.tmpdir – 默认临时文件路径-->
 
     <!--defaultCache：默认缓存策略，当ehcache找不到定义的缓存时，则使用这个缓存策略。只能定义一个。-->
-    <defaultCache eternal="false" maxElementsInMemory="1000" overflowToDisk="false" diskPersistent="false"
-                  timeToIdleSeconds="0" timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU" />
+    <defaultCache
+            eternal="false"
+            maxElementsInMemory="1000"
+            overflowToDisk="false"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU" />
 
-    <cache name="demo"
+    <cache name="test"
            eternal="false"
            maxElementsInMemory="100"
            overflowToDisk="false"

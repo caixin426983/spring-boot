@@ -8,7 +8,7 @@ import java.util.List;
 public interface IUserService extends IService<TUser> {
 
 
-    List<TUser> getAllUser();
+    List<TUser> getAllUser(String page);
 
     TUser getUserById(Long id);
 
