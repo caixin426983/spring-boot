@@ -36,6 +36,17 @@ spring:
     type: ehcache
     ehcache:
       config: classpath:ehcache.xml
+  mail:
+    host: smtp.163.com
+    username: 18140349851@163.com
+    password: cx426983
+    properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: false
+              required: false
 
 
 
