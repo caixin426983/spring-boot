@@ -1,7 +1,6 @@
 package com.cx.springboot.controller;
 
 import com.cx.springboot.config.socket.WebSocketPushHandler;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +15,8 @@ import org.springframework.web.socket.TextMessage;
 
 @RestController
 @RequestMapping(value = "socket")
-@Api(value = "socketController")
+
+
 public class SocketController {
 
 
